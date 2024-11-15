@@ -1,0 +1,32 @@
+name: gunnell_cemetery_app
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0" # Make sure the SDK version is aligned properly with Firebase dependencies.
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.3.1
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  cupertino_icons: ^1.0.8
+  firebase_core: ^3.6.0 # Downgrade to align versions with firestore and core
+  cloud_firestore: ^5.4.4 # Downgrade to ensure compatibility with firebase_core
+  firebase_auth: ^5.3.1
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Adding assets for drone map image
+  assets:
+    - assets/qgis_map.png
